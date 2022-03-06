@@ -1,0 +1,24 @@
+var searchTerm = e.NewTextValue;
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                searchTerm = string.Empty;
+            }
+
+            searchTerm = searchTerm.ToLowerInvariant();
+            var filterItems = Items.Where(value => value.Title.ToLowerInvariant().Contains(searchTerm));
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                filterItems = Items;
+            }
+            // 
+            for (int i = 0; i < Items.Count; i++)
+            {
+                if (!filterItems.Contains(Items.Where(item => item)))
+                {
+                    Items.ToList().RemoveAll(movie => movie.Title.ToLowerInvariant().(filterItems.ToList().All));
+                }
+                else if (!Items.Contains(value))
+                {
+                    Items.Add(value);
+                }
+            }
